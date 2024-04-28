@@ -1,0 +1,41 @@
+body {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    max-width:600px;
+    position: relative;
+    margin: auto;
+    line-height: 1.5;
+}
+h2 {
+    color: #006EB6;
+    letter-spacing: 3px;
+    font-size: 12pt;
+    text-transform: uppercase;
+    margin-top: -15px;
+    border: none; 
+    border-bottom: 1px solid #000;
+}
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    text-transform: uppercase;
+}
+h3 {
+    font-style: italic;
+}
+p {
+    line-height: 1.5;
+}
+li {
+    list-style-type: decimal;
+    padding: 5gitpx;
+    padding-left: 20pt;
+}
+img {
+    width: 150px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
