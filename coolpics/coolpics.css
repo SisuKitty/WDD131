@@ -72,7 +72,6 @@ img {
 h3 {
     font-size: 30px;
 }
-
 footer {
     background: var(--primary-color);
     padding: 1px 100px;
@@ -83,7 +82,7 @@ footer {
 #gallery {
     grid-template-columns: 1fr;
 }
-.nav {
+#nav {
     grid-template-columns: 1fr;
 }
 button {
@@ -91,6 +90,9 @@ button {
     border: none;
     outline: none;
     margin-top: 50px;
+}
+.hidden {
+    display: none;
 }
 }
 
