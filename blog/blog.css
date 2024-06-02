@@ -26,7 +26,7 @@ div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
-    padding: 50px 70px 0px 70px;
+    padding: 0px 70px 0px 70px;
     border-top: 3px solid var(--gold-color);
     border-bottom: 3px solid var(--gold-color);
     justify-content: center; /* Center items horizontally */
@@ -46,7 +46,7 @@ a:any-link {
     margin: 50px 125px;
 }
 .filter {
-    margin: 0px 125px;
+    margin: 50px 125px;
 }
 .title {
     font-size: 30px;
