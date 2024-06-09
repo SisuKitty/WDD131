@@ -1,0 +1,246 @@
+body {
+  background-color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 10pt;
+}
+
+#total {
+  font-size: 12px;
+  display: inline-block;
+  background: none;
+}
+
+#card_back {
+  top: 40px;
+  right: 0;
+  z-index: -2;
+}
+
+#card-stripe {
+  width: 100%;
+  height: 55px;
+  background-color: #757575;
+  position: absolute;
+  right: 0;
+}
+
+.card_image {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+button {
+  background-color: rgba(198, 198, 198, 0.8);
+  color: #000000;
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  width: 150px;
+  border-radius: 8px;
+  height: 42px;
+  font-size: 12px;
+  font-family:sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(121, 121, 121);
+  color: #ffffff;
+}
+
+#cvc {
+  width: 60px;
+  margin-bottom: 0;
+}
+
+#card_front,
+#card_back {
+  position: absolute;
+  background-color: #b2b2b2;
+  width: 390px;
+  height: 250px;
+  border-radius: 6px;
+  padding: 20px 30px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+#card-image {
+  float: right;
+  height: 100%;
+}
+
+#card-image i {
+  font-size: 40px;
+}
+
+#month {
+  width: 45% !important;
+}
+
+#card_number,
+#card_holder {
+  width: 100%;
+}
+
+#card_success {
+  color: #00b349;
+}
+
+#card_token {
+  display: none;
+}
+
+#year {
+  width: 45%;
+  float: right;
+}
+
+#card_holder_container {
+  width: 60%;
+  display: inline-block;
+}
+
+#cvc_container {
+  position: absolute;
+  width: 110px;
+  right: 0px;
+  bottom: 30px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+#cvc_container label {
+  width: 100%;
+}
+
+#cvc_container p {
+  font-size: 6px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  letter-spacing: .5px;
+}
+
+#form_container {
+  margin: auto;
+  width: 500px;
+  height: 290px;
+  position: relative;
+}
+
+#form_errors {
+  color: #eb0000;
+}
+
+#form_errors,
+#card_success {
+  background-color: white;
+  width: 500px;
+  margin: 0 auto 10px;
+  height: 50px;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 46px;
+  letter-spacing: .5px;
+  text-transform: none;
+}
+
+#form_errors p,
+#card_success p {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+#date_container {
+  margin-left: 10px;
+  width: 32%;
+  display: inline-block;
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  margin: 0 0 25px;
+  color: #000000;
+  font-size: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: sans-serif;
+  letter-spacing: .7px;
+}
+
+input::-webkit-input-placeholder {
+  color: #919191;
+  opacity: 0.7;
+  font-family: sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input:-moz-placeholder {
+  color: #919191;
+  opacity: 0.7;
+  font-family: sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input::-moz-placeholder {
+  color: #919191;
+  opacity: 0.7;
+  font-family: sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input:-ms-input-placeholder {
+  color: #919191;
+  opacity: 0.7;
+  font-family: sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input.invalid {
+  border: solid 2px #000000;
+  height: 34px;
+}
+
+label {
+  margin: 0 auto 7px;
+  display: inline-block;
+}
+
+.shadow {
+  width: 284px;
+  height: 214px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
