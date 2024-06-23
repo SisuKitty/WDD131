@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
+    <title>Recipes</title>
+</head>
+<body>
+    <header>    
+        <img id="recipe-book-img" src="images/recipe-book.png" alt="recipe book">
+        <p class="nowrap" id="site-name">RecipeBook</p>
+    </header>
+    <main>
+        <form id="search-bar" action="/search" method="GET">
+            <label for="search"></label>
+            <input type="search" id="search" name="q" placeholder="Find a recipe">
+            <button type="search"><img src="images/search.svg" alt="magnifying glass"></button>
+        </form>
+        <div class="recipe">
+            <img src="images/roasted-potatoes.webp" alt="potatoes" id="recipe-photo">
+            <div class="recipe-text">
+            <p id="tag">Potatoes</p>
+            <p id="title">Oven Roasted potato slices</p>
+            <span
+            class="rating"
+            role="img"
+            aria-label="Rating: 4 out of 5 stars"
+        >
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+            <p id="description">Easy and delicious oven roasted potatoes that go great with almost anything.</p>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a id="attribution" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </footer>
+</body>
+</html>
