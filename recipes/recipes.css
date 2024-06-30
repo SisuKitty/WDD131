@@ -77,6 +77,11 @@ button > img {
     width: 5em;
 }
 
+.star {
+    font-size: 24px;
+    color: gold;
+}
+
 @media screen {
     #recipe-book-img {
         width: 1em;
