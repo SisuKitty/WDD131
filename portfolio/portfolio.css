@@ -9,15 +9,19 @@ body {
 
 /* Header and Navigation */
 header {
-    background: #333;
     color: #fff;
     padding: 20px 0;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-self: flex-start;
     list-style: none;
+}
+
+nav ul img {
+    width: 25%;
 }
 
 nav ul li {
@@ -63,6 +67,10 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+img {
+    width: 100%;
 }
 
 /* Responsive Design */
