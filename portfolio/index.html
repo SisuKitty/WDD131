@@ -7,32 +7,63 @@
     <script src="portfolio.js" defer></script>
     <link rel="stylesheet" href="portfolio.css">
 </head>
-<body>
-    <header>
+<header>
     <nav>
-        <ul class="nav">
-            <li class="nav_name"><a href="index.html"><img src="images/GibbonsGraphics-03.svg" alt="Sheena Gibbons"></a></li>
+        <ul>
+            <section class="circle_logo"><img src="images/GibbonsGraphicsCircle-02.svg" alt="Circle Logo"></section>
+            <p class="nav_name"><a href="index.html"><img src="images/Name&Designer-03.svg" alt="Sheena Gibbons"></a></p>
             <li class="nav_link"><a href="portfolio.html">Portfolio</a></li>
             <li class="nav_link"><a href="about.html">About</a></li>
             <li class="nav_link"><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    </header>
     <div class="motion_reel">
-        <video width="600" controls autoplay muted>
-            <source src="your-video-file.mp4" type="video/mp4">
+        <video width="775" controls autoplay muted class="video_box">
+            <source src="images/RecapReel_Final.mp4" type="video/mp4" class="video_file">
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="graphic_designs">
-        <div class="design"></div>
-    </div>
-    <div class="about_me">
-        <h1>Introducing Sheena</h1>
-        <p>Hey everyone! I am so excited to dive deep into design with you!</p>
-        <img src="" alt="Profile Photo of Sheena">
+    </header>
+<body>
+    <div class="grid">
+        <div class="spotlight">
+            <div class="projects">
+            <div class="project_container">
+                <img src="images/Branding_logos-01.png" alt="Project Img" class="project_img">
+                <h2 class="overlay">LIBRARY IDENTITY</h2>
+            </div>
+            <div class="project_container">
+                <img src="images/Branding_logos-02.png" alt="Project Img" class="project_img">
+                <h2 class="overlay">EVENT PLANNER LOGO</h2>
+            </div>
+            <div class="project_container">
+                <img src="images/Identity_Graf.png" alt="Project Img" class="project_img">
+                <h2 class="overlay">PRINT BRANDING</h2>
+            </div>
+            <button><a href="portfolio.html">Explore More</a></button>
+            </div>
+        </div>
+        <div class="about_me">
+            <img src="" alt="Profile Photo of Sheena" id="profile_img">
+            <div id="me">
+            <h1>MEET THE DESIGNER</h1>
+            <p>A BYU-I senior in Graphic Design that loves to do motion design, web design and branding. Earning a certificate in front-end web development in the persuit of understanding technology and engagement with digital designs. </p>
+            <button><a href="about.html">Dig Deeper</a></button>
+            </div>
+        </div>
+        <!-- <div class="services">
+            <h1>BUILDING BLOCKS</h1>
+                <li>Identity & Branding</li>
+                <li>Motion Design</li>
+                <li>Web Design</li>
+        </div> -->
     </div>
     <footer>
+        <h1>LET'S CREATE</h1>
+        <button><a href="contact.html">Reach Out</a></button>
+        <a href="https://www.linkedin.com/in/sheena-gibbons/" id="Linkedin"><img src="images/Linkedin-02.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/gibbons.graphics/" id="Instagram"><img src="images/insta-02.png" alt="Instagram"></a>
+        <a href="hhttps://www.instagram.com/gibbons.graphics/" id="Facebook"><img src="images/facebook-02.png" alt="Facebook"></a>
         <p>&copy; 2024 Sheena Gibbons</p>
     </footer>
 </body>
