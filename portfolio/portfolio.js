@@ -8,31 +8,96 @@ const projects = [
         title: "LIBRARY IDENTITY",
         image: "./images/Branding_logos-01.png",
         alt: "los angeles library logo",
-        details: "",
+        preview: "./projects/MilkyWayMcKay_DSN.mp4",
+        details: "Researched & strategized for branding to apply to Los Angeles Central Library. The library is a beautiful building filled with wonderful resources, so I built on it's values.",
         client: "Los Angeles Central Library",
         disciplines: "Identity, Branding",
-        tags: ["", ""],
+        tags: ["identity&branding", ""],
         process: "./images/",
+        displayModal: () => {
+            html = modalTemplate(projects[0]);
+            const output = document.querySelector(".modal-content");
+            output.innerHTML = html;
+            const exit = document.querySelector(".close-button");
+            exit.addEventListener('click', closeModal);
+            renderModal();
+        },
     },
     {
         title: "EVENT PLANNER LOGO",
         image: "./images/Branding_logos-02.png",
         alt: "on top planning logo",
+        preview: "./images/",
         details: "",
         client: "On Top Planning",
-        disciplines: "Branding",
-        tags: ["", ""],
+        disciplines: "Identity",
+        tags: ["identity&branding", ""],
         process: "./images/",
+        displayModal: () => {
+            html = modalTemplate(projects[1]);
+            const output = document.querySelector(".modal-content");
+            output.innerHTML = html;
+            const exit = document.querySelector(".close-button");
+            exit.addEventListener('click', closeModal);
+            renderModal();
+        },
     },    
     {
         title: "PRINT BRANDING",
         image: "./images/Identity_Graf.png",
         alt: "print examples",
+        preview: "./images/",
         details: "",
         client: "Emily Graf",
         disciplines: "Identity, Branding, Print",
-        tags: ["print", ""],
+        tags: ["", "identity&branding"],
         process: "./images/",
+        displayModal: () => {
+            html = modalTemplate(projects[2]);
+            const output = document.querySelector(".modal-content");
+            output.innerHTML = html;
+            const exit = document.querySelector(".close-button");
+            exit.addEventListener('click', closeModal);
+            renderModal();
+        },
+    },
+    {
+        title: "SPACE EVENT POSTER",
+        image: "./projects/Space-01.png",
+        alt: "on top planning logo",
+        preview: "./projects/MilkyWayMcKay_DSN.mp4",
+        details: "",
+        client: "On Top Planning",
+        disciplines: "Branding",
+        tags: ["advertisement", ""],
+        process: "./images/",
+        displayModal: () => {
+            html = modalTemplate(projects[3]);
+            const output = document.querySelector(".modal-content");
+            output.innerHTML = html;
+            const exit = document.querySelector(".close-button");
+            exit.addEventListener('click', closeModal);
+            renderModal();
+        },
+    }, 
+    {
+        title: "SPACE EVENT POSTER",
+        image: "./projects/Space-01.png",
+        alt: "on top planning logo",
+        preview: "./projects/MilkyWayMcKay_DSN.mp4",
+        details: "",
+        client: "On Top Planning",
+        disciplines: "Branding",
+        tags: ["", ""],
+        process: "./images/",
+        displayModal: () => {
+            html = modalTemplate(projects[4]);
+            const output = document.querySelector(".modal-content");
+            output.innerHTML = html;
+            const exit = document.querySelector(".close-button");
+            exit.addEventListener('click', closeModal);
+            renderModal();
+        },
     }    
 ]
 
@@ -69,16 +134,35 @@ renderGallery(projects);
 
 
 //MODAL POP-UP ON CLICK
-function modalTemplate(projects) {
-    return `<figure class="modal" id="modal">
-    <div class="modal-content">
-        <span class="close-button" id="close-button">&times;</span>
-        <img id="modal-image" src="${projects.image}" alt="${projects.alt}">
-        <div id="modal-title" src="${projects.title}"</div>
-        <div id="modal-details">${projects.details}</div>
-        <img id="modal-process" src="${projects.process}">
-    </div>
-    </figure>` ;
+function renderModal(projects) {
+	// get the element we will output the projects into
+    const output = document.querySelector(".modal");
+	// use the projectTemplate function to transform our project objects into project HTML strings
+    let projectString = ``
+    for (let i = 0; i < projects.length; i++) {
+    projectString += modalTemplate(projects[i]);
+    }
+	// Set the HTML strings as the innerHTML of our output element.
+    console.log(projectString);
+    output.innerHTML = projectString;
+}
+
+function modalTemplate(project) {
+    return `<span class="close-button" id="close-button">&times;</span>
+        <img id="modal-image" src="${project.preview}">
+        <div id="modal-title">${project.title}</div>
+        <div id="modal-details">${project.details}</div>
+        <img id="modal-process" src="${project.process}">` ;
+}
+
+function renderModal() {
+    modal = document.getElementById("modal");
+    modal.classList.remove('hide');
+}
+
+function closeModal() {
+    modal = document.getElementById("modal");
+    modal.classList.add('hide');
 }
 
 function showModal(event) {
@@ -93,8 +177,9 @@ function showModal(event) {
     modal.style.display = 'block';
 }
 
-// Function to hide the modal
-function hideModal() {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'none';
+const imageOpen = document.querySelectorAll(".project_img");
+
+for (let i = 0; i <  imageOpen.length; i++) {
+    imageOpen[i].addEventListener('click', projects[i].displayModal);
 }
+
